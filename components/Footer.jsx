@@ -22,7 +22,7 @@ const Footer = () => (
         fontFamily: F_JOST, fontSize: '13px',
         color: 'var(--color-gold)', fontWeight: '600', letterSpacing: '0.04em',
       }}>
-        Project RERA No.: Update Soon
+        Project RERA NO.: A51700000030 (Subject to official approvals)
       </p>
     </div>
 

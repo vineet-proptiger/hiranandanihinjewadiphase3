@@ -10,7 +10,7 @@ const stats = [
   { value: '37+', label: 'Years of Expertise' },
 ]
 
-const AboutGodrej = () => (
+const AboutDeveloper = () => (
   <section id="about" style={{ padding: '72px 0', background: '#f5f5f5' }}>
     <div className="max-w-4xl mx-auto px-4 md:px-8" style={{ textAlign: 'center' }}>
 
@@ -38,17 +38,11 @@ const AboutGodrej = () => (
           margin: '0 0 52px', textAlign: 'justify',
         }}
       >
-        Hiranandani Group is one of India&apos;s most prestigious real estate conglomerates, renowned
-        for creating iconic integrated townships and luxury developments across the country. Founded
-        by Dr. Niranjan Hiranandani, the group has transformed India&apos;s urban landscape with
-        world-class residential, commercial, and retail projects that set the benchmark for quality
-        and innovation. Their townships are celebrated for superior infrastructure, lush green
-        landscapes, and self-sustained communities that offer a truly elevated lifestyle.
-        With Hiranandani Hinjewadi Township at Krisala Everland, the group brings its legacy
-        of excellence to Pune&apos;s booming IT corridor — offering premium 2, 3 & 4 BHK flats
-        across a 105-acre master-planned township. Known for timely delivery, quality construction,
-        and world-class amenities, Hiranandani projects remain the preferred choice for discerning
-        homebuyers and investors.
+        Hiranandani Group is one of India&apos;s most trusted real estate developers, founded by
+        Dr. Niranjan Hiranandani, known for pioneering integrated township developments across
+        major cities. With over four decades of legacy, the brand is renowned for its superior
+        construction quality, thoughtful urban planning, and landmark communities that offer a
+        perfect blend of modern lifestyle, infrastructure, and sustainability.
       </p>
 
       {/* Stats row */}
@@ -94,4 +88,4 @@ const AboutGodrej = () => (
   </section>
 )
 
-export default AboutGodrej
+export default AboutDeveloper
