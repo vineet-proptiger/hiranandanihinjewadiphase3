@@ -6,6 +6,6 @@ export default function robots() {
         allow: '/',
       },
     ],
-    sitemap: 'https://hiranandanihinjewadi.in/sitemap.xml',
+    sitemap: 'https://hiranandanihinjewadiphase3.in/sitemap.xml',
   }
 }

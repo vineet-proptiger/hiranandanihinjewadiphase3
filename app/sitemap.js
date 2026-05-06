@@ -1,4 +1,4 @@
-const BASE_URL = 'https://hiranandanihinjewadi.in'
+const BASE_URL = 'https://hiranandanihinjewadiphase3.in'
 
 export default function sitemap() {
   return [
