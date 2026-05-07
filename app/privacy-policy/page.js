@@ -22,9 +22,7 @@ export default function PrivacyPolicy() {
       <AosInit />
 
       {/* ── Navbar (Sticky/Fixed) ── */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-300 ${scrolled ? 'shadow-md' : 'shadow-sm'}`}>
-        {/* Top Teal Accent Line */}
-        <div className="h-0.5 w-full" style={{ background: `linear-gradient(90deg, var(--color-gold), var(--color-gold-light), var(--color-gold))` }}></div>
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#0D3B50] shadow-md' : 'bg-[#0D3B50] shadow-sm'}`}>
 
         <div className="container mx-auto px-4 md:px-8 flex items-center justify-between h-[80px]">
           <Link href="/" className="flex items-center">
@@ -32,7 +30,7 @@ export default function PrivacyPolicy() {
           </Link>
           <Link
             href="/"
-            className="text-[11px] sm:text-sm font-semibold px-4 py-2 sm:px-6 sm:py-2.5 rounded-full transition-all hover:opacity-90 btn-primary shadow-lg"
+            className="text-[11px] sm:text-sm font-semibold px-4 py-2 sm:px-6 sm:py-2.5 rounded-full transition-all hover:opacity-90 btn-gold shadow-lg"
           >
             ← BACK TO HOME
           </Link>
@@ -75,7 +73,7 @@ export default function PrivacyPolicy() {
       </section>
 
       {/* ── Content ── */}
-      <section className="py-8 sm:py-16 bg-[#f9f9f9]">
+      <section className="py-8 sm:py-16 bg-[#F3F7F9]">
         <div
           className="container mx-auto px-4 md:px-8"
           style={{ maxWidth: '900px' }}
@@ -299,7 +297,7 @@ export default function PrivacyPolicy() {
       </section>
 
       {/* ── Footer (mini) ── */}
-      <footer style={{ background: 'var(--color-dark)', color: '#fff', padding: '24px', textAlign: 'center', borderTop: '1px solid #333' }}>
+      <footer style={{ background: '#061E28', color: '#fff', padding: '24px', textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
         <p style={{ fontSize: '13px', color: '#888', fontFamily: 'var(--font-sans)' }}>
           &copy; 2026 Hiranandani Hinjewadi Township. All rights reserved |{' '}
           <Link href="/" style={{ color: 'var(--color-gold)', textDecoration: 'none' }}>Back to Home</Link>
