@@ -22,7 +22,7 @@ const Hero = ({ setIsOpen }) => {
       className="relative w-full flex flex-col mt-[33px] lg:mt-0 overflow-hidden"
     >
       {/* ── TOP AREA: Image & Text ── */}
-      <div className="relative h-[60vh] min-h-[320px] lg:h-[82vh] lg:min-h-[500px] overflow-hidden">
+      <div className="relative h-[55vh] min-h-[320px] lg:h-auto lg:aspect-[2520/1440] lg:min-h-[500px] overflow-hidden">
         {/* ── Background image carousel ── */}
         {slides.map((src, idx) => (
           <div
@@ -36,6 +36,7 @@ const Hero = ({ setIsOpen }) => {
               fill
               className="object-cover"
               priority={idx === 0}
+              unoptimized={true}
               sizes="100vw"
               quality={100}
             />
@@ -48,7 +49,7 @@ const Hero = ({ setIsOpen }) => {
         }} />
 
         {/* ── Center-bottom text ── */}
-        <div className="absolute left-0 right-0 bottom-10 lg:bottom-[40px] z-[2] text-center px-4">
+        <div className="absolute left-0 right-0 bottom-10 lg:bottom-[10%] z-[2] text-center px-4">
           {/* Project Tagline */}
           <div className="mb-3">
             <span style={{
