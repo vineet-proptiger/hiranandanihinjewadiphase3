@@ -34,7 +34,7 @@ const nephilm = localFont({
 
 export const metadata = {
   title: 'Hiranandani Hinjewadi Township | 2, 3 & 4 BHK Flats, Hinjewadi Phase 3, Krisala Everland, Pune',
-  description: 'Hiranandani Hinjewadi Township — New Launch 2, 3 & 4 BHK Flats in Hinjewadi Phase 3, Krisala Everland, Pune. A 105-acre integrated township by Hiranandani Group on the Pune IT & Growth Corridor. Starting ₹75.99 Lakhs*.',
+  description: 'Hiranandani Hinjewadi Township — New Launch 2, 3 & 4 BHK Flats in Hinjewadi Phase 3, Krisala Everland, Pune. A 105-acre integrated township by Hiranandani Group on the Pune IT & Growth Corridor. Starting ₹79.99 Lacs*.',
   icons: {
     icon: faviconImages.icon,
     apple: faviconImages.apple,

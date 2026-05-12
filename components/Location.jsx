@@ -75,7 +75,7 @@ const Location = () => {
                   data-aos="fade-up"
                   data-aos-delay={i * 60}
                   style={{
-                    border: open ? '1px solid rgba(196,149,42,0.45)' : '1px solid #2e2e2e',
+                    border: open ? '1px solid rgba(205, 146, 46, 0.45)' : '1px solid #2e2e2e',
                     borderRadius: '4px',
                     overflow: 'hidden',
                     marginBottom: '8px',
@@ -92,11 +92,11 @@ const Location = () => {
                       justifyContent: 'space-between',
                       padding: '14px 16px',
                       background: open
-                        ? 'linear-gradient(90deg, rgba(196,149,42,0.18) 0%, rgba(196,149,42,0.06) 100%)'
+                        ? 'linear-gradient(90deg, rgba(205, 146, 46, 0.18) 0%, rgba(205, 146, 46, 0.06) 100%)'
                         : '#242424',
                       border: 'none',
                       cursor: 'pointer',
-                      borderBottom: open ? '1px solid rgba(196,149,42,0.2)' : '1px solid transparent',
+                      borderBottom: open ? '1px solid rgba(205, 146, 46, 0.2)' : '1px solid transparent',
                       transition: 'background 0.3s',
                     }}
                   >
@@ -175,7 +175,7 @@ const Location = () => {
               position: 'relative',
             }}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.1234567890!2d73.7373737!3d18.5907777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb85b8c6a4a3%3A0x2c7e8b99f56e9c9f!2sHinjewadi%20Phase%203%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3116.0612421310643!2d73.6678154!3d18.635971299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa5be0e4996117827%3A0xfe06dff2608c0862!2sKrisala%20x%20Hiranandani%20Township!5e1!3m2!1sen!2sin!4v1778563067291!5m2!1sen!2sin"
                 width="100%" height="100%"
                 style={{ border: 0, minHeight: '420px', display: 'block', filter: 'grayscale(20%)' }}
                 allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
