@@ -21,16 +21,15 @@ const Highlights = ({ setIsOpen }) => (
 
       {/* LEFT — image */}
       <div
-        className="w-full lg:w-[45%] relative p-4 sm:p-6 lg:p-8 h-[320px] sm:h-[400px] lg:h-auto"
-        style={{ minHeight: '320px' }}
+        className="w-full lg:w-[45%] relative p-4 sm:p-6 lg:p-8 flex items-center justify-center"
         data-aos="fade-right"
       >
-        <div className="relative w-full h-full overflow-hidden">
+        <div className="relative w-full aspect-[2520/1440] overflow-hidden">
           <Image
             src={highlightsMainImage}
             alt="Hiranandani Hinjewadi Township Highlights"
             fill
-            className="object-contain"
+            className="object-cover"
             sizes="(max-width:1024px) 100vw, 45vw"
           />
         </div>

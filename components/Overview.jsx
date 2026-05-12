@@ -136,7 +136,7 @@ const Overview = () => (
             fontFamily: F_SANS, fontSize: '14.5px', color: '#444444',
             lineHeight: 1.9, margin: '0 0 32px', textAlign: 'justify',
           }}>
-            Hiranandani Hinjewadi Phase 3 marks the iconic new tower launch in Pune's prime IT hub, offering thoughtfully designed luxury residences within a well-planned township ecosystem. With Phase 3 token bookings now open, this new launch presents a rare opportunity to own a premium home featuring modern architecture, excellent ventilation, ample natural light, and scenic green views — crafted with the trusted quality and lifestyle excellence of Hiranandani.
+            Hiranandani Hinjewadi Phase 3 marks the iconic new tower launch in Pune's prime IT hub, offering thoughtfully designed luxury residences within a well-planned township ecosystem. With Phase 3 token bookings now open, this new launch presents a rare opportunity to own a premium home featuring modern architecture, excellent ventilation, ample natural light, and scenic green views — crafted with the trusted quality and lifestyle excellence of Hiranandani. Designed for the modern achiever, the project offers seamless connectivity to major business parks, world-class educational institutions, and healthcare facilities. Here, life goes beyond four walls, integrating lush open spaces with state-of-the-art amenities to provide a balanced and sophisticated urban living experience.
           </p>
 
           {/* Stats grid commented out

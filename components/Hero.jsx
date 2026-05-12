@@ -49,7 +49,7 @@ const Hero = ({ setIsOpen }) => {
         }} />
 
         {/* ── Center-bottom text ── */}
-        <div className="absolute left-0 right-0 bottom-10 lg:bottom-[10%] z-[2] text-center px-4">
+        <div className="absolute left-0 right-0 bottom-10 lg:bottom-[30%] z-[2] text-center px-4">
           {/* Project Tagline */}
           <div className="mb-3">
             <span style={{
@@ -161,18 +161,31 @@ const Hero = ({ setIsOpen }) => {
           overflow: 'hidden',
         }}>
           {[
-            'NEW LAUNCH',
-            '2, 3 & 4 BHK FLATS',
-            '79.99 Lacs* ONWARDS',
-          ].map((text, i) => (
+            { label: 'STATUS', value: 'NEW LAUNCH' },
+            { label: 'CONFIGURATIONS', value: '2, 3 & 4 BHK FLATS' },
+            { label: 'PRICE', value: '79.99 Lacs* ONWARDS' },
+          ].map((item, i) => (
             <div
               key={i}
               style={{
                 textAlign: 'center',
-                padding: '16px 8px',
+                padding: '12px 8px',
                 borderRight: i < 2 ? '1px solid rgba(255,255,255,0.1)' : 'none',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '2px'
               }}
             >
+              <span style={{
+                fontFamily: F_SANS,
+                fontSize: 'clamp(8px, 1.2vw, 10px)',
+                fontWeight: '700',
+                color: 'var(--color-gold)',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+              }}>
+                {item.label}
+              </span>
               <span style={{
                 fontFamily: F_JOST,
                 fontSize: 'clamp(10px, 1.8vw, 15px)',
@@ -182,7 +195,7 @@ const Hero = ({ setIsOpen }) => {
                 textTransform: 'uppercase',
                 textShadow: '0 1px 4px rgba(0,0,0,0.3)',
               }}>
-                {text}
+                {item.value}
               </span>
             </div>
           ))}
