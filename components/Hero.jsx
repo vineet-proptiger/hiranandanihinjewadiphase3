@@ -45,7 +45,7 @@ const Hero = ({ setIsOpen }) => {
 
         {/* ── Dark gradient overlay ── */}
         <div className="absolute inset-0 z-[1]" style={{
-          background: 'linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0) 100%)',
+          background: 'linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.08) 50%, rgba(0,0,0,0) 100%)',
         }} />
 
         {/* ── Center-bottom text ── */}
