@@ -70,7 +70,7 @@ const EarlyForm = () => {
     <div style={{ textAlign: 'center', padding: '28px 0' }}>
       <div style={{
         width: '52px', height: '52px', borderRadius: '50%',
-        background: 'rgba(196,149,42,0.12)', border: '2px solid var(--color-gold)',
+        background: 'rgba(205, 146, 46, 0.12)', border: '2px solid var(--color-gold)',
         display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 12px',
       }}>
         <svg width="24" height="24" fill="none" stroke="var(--color-gold)" strokeWidth="2.5" viewBox="0 0 24 24">

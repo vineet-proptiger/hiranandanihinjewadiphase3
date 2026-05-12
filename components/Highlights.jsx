@@ -7,12 +7,12 @@ const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
 const highlights = [
-  { title: 'Iconic Tower Launch in Hinjewadi Phase 3', sub: 'New tower launch in Pune\'s most sought-after IT township' },
-  { title: 'Located in Pune\'s Prime IT Hub', sub: 'Strategically situated in Hinjewadi Phase 3, Krisala Everland' },
-  { title: 'Premium Homes in Integrated Township', sub: '2, 3 & 4 BHK luxury residences within a 105-acre township' },
-  { title: 'Surrounded by Landscaped Greens', sub: 'Lush green open spaces and scenic garden views' },
-  { title: 'Designed for Natural Light & Ventilation', sub: 'Thoughtful architecture for excellent airflow and daylight' },
-  { title: 'Phase 3 Token Booking Now Open', sub: 'Secure your home early and unlock token benefits up to ₹9 Lakhs*' },
+  { title: 'Iconic Tower Launch in Hinjewadi Phase 3', sub: 'Experience ultra-luxury living in Pune\'s most prestigious township.' },
+  { title: 'Located in Pune\'s Prime IT Hub', sub: 'Strategic proximity to global IT parks and upcoming Metro.' },
+  { title: 'Premium Homes in Integrated Township', sub: 'Luxurious residences within a self-sustained 105-acre master-planned township.' },
+  { title: 'Surrounded by Landscaped Greens', sub: 'Over 70% open spaces featuring lush thematic gardens.' },
+  { title: 'Designed for Natural Light & Ventilation', sub: 'Scientific architecture ensuring maximum daylight and perfect cross-ventilation.' },
+  { title: 'Phase 3 Token Booking Now Open', sub: 'Avail early-bird advantages with exclusive limited-period token bookings.' },
 ]
 
 const Highlights = ({ setIsOpen }) => (
@@ -72,7 +72,7 @@ const Highlights = ({ setIsOpen }) => (
               }}
               onMouseEnter={e => {
                 e.currentTarget.style.borderColor = 'var(--color-gold)'
-                e.currentTarget.style.background = 'rgba(196,149,42,0.06)'
+                e.currentTarget.style.background = 'rgba(205, 146, 46, 0.06)'
               }}
               onMouseLeave={e => {
                 e.currentTarget.style.borderColor = '#3a3a3a'
@@ -81,9 +81,17 @@ const Highlights = ({ setIsOpen }) => (
             >
               <p style={{
                 fontFamily: F_JOST, fontWeight: '700', fontSize: '14px',
-                color: '#ffffff', margin: '0 0 5px', letterSpacing: '0.02em',
+                color: '#ffffff', margin: '0 0 6px', letterSpacing: '0.02em',
+                lineHeight: '1.3'
               }}>
                 {h.title}
+              </p>
+              <p style={{
+                fontFamily: F_SANS, fontSize: '11.5px',
+                color: 'rgba(255,255,255,0.6)', margin: 0,
+                lineHeight: '1.5'
+              }}>
+                {h.sub}
               </p>
             </div>
           ))}

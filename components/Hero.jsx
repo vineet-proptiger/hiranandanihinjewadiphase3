@@ -124,7 +124,7 @@ const Hero = ({ setIsOpen }) => {
         <div style={{
           background: 'rgba(13,59,80,1)',
           display: 'grid', gridTemplateColumns: '1fr 1fr 1fr',
-          borderTop: '1px solid rgba(244, 117, 32, 0.35)',
+          borderTop: '1px solid rgba(205, 146, 46, 0.35)',
         }}>
           {[
             '105 Acres Integrated Township',
@@ -156,7 +156,7 @@ const Hero = ({ setIsOpen }) => {
         <div style={{
           background: 'linear-gradient(135deg, #0C3547 0%, #0E4358 100%)',
           display: 'grid', gridTemplateColumns: '1fr 1fr 1fr',
-          borderTop: '1px solid rgba(244, 117, 32, 0.25)',
+          borderTop: '1px solid rgba(205, 146, 46, 0.25)',
           boxShadow: '0 -10px 40px rgba(7,30,40,0.6)',
           overflow: 'hidden',
         }}>

@@ -9,11 +9,11 @@
    ═══════════════════════════════════════════════════════════════ */
 :root {
   /* ── Brand Orange (Ramky logo — single source for all buttons/accents) ── */
-  --color-gold: #F47520;
-  --color-gold-light: #F68A40;
-  --color-gold-dark: #D45F10;
-  --color-gold-bg: #FFF3EA;
-  --color-gold-rgb: 244, 117, 32;
+  --color-gold: #CD922E;
+  --color-gold-light: #DEA84A;
+  --color-gold-dark: #A67625;
+  --color-gold-bg: #FCF5E8;
+  --color-gold-rgb: 205, 146, 46;
 
   /* ── Teal Brand — from logo ── */
   --color-teal: #0D3B50;
