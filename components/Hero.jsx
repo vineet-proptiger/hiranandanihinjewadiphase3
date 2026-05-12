@@ -97,7 +97,7 @@ const Hero = ({ setIsOpen }) => {
                 fontFamily: F_SANS, fontSize: 'clamp(12px, 1.2vw, 15px)', color: '#ffffff',
                 fontWeight: '600', letterSpacing: '0.04em', textTransform: 'uppercase',
               }}>
-                Hinjewadi Phase 3, Pune
+                Hinjewadi Phase 3 Krisala Everland, Pune
               </span>
             </div>
 
