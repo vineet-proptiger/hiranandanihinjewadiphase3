@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 import React from 'react'
 import Image from 'next/image'
 import { highlightsMainImage } from '../lib/images'
@@ -25,7 +25,7 @@ const Highlights = ({ setIsOpen }) => (
         style={{ minHeight: '320px' }}
         data-aos="fade-right"
       >
-        <div className="relative w-full h-full overflow-hidden rounded-2xl shadow-2xl">
+        <div className="relative w-full h-full overflow-hidden">
           <Image
             src={highlightsMainImage}
             alt="Hiranandani Hinjewadi Township Highlights"
@@ -33,8 +33,6 @@ const Highlights = ({ setIsOpen }) => (
             className="object-contain"
             sizes="(max-width:1024px) 100vw, 45vw"
           />
-          {/* subtle dark overlay on image */}
-          <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.15)' }} />
         </div>
       </div>
 
