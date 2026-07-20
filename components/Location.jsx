@@ -175,10 +175,10 @@ const Location = () => {
               position: 'relative',
             }}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3116.0612421310643!2d73.6678154!3d18.635971299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa5be0e4996117827%3A0xfe06dff2608c0862!2sKrisala%20x%20Hiranandani%20Township!5e1!3m2!1sen!2sin!4v1778563067291!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15122.850245155012!2d73.660995!3d18.631994!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa5be0e4996117827%3A0xfe06dff2608c0862!2sKrisala%20x%20Hiranandani%20Township!5e0!3m2!1sen!2sin!4v1784543200280!5m2!1sen!2sin"
                 width="100%" height="100%"
                 style={{ border: 0, minHeight: '420px', display: 'block', filter: 'grayscale(20%)' }}
-                allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen="" loading="lazy" referrerPolicy="strict-origin-when-cross-origin"
               />
             </div>
           </div>

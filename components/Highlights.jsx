@@ -54,16 +54,17 @@ const Highlights = ({ setIsOpen }) => (
         {/* RIGHT — content */}
         <div
           className="w-full lg:w-[55%] flex flex-col justify-start"
-          style={{ padding: '32px clamp(24px,5vw,64px)' }}
+          style={{ padding: '32px clamp(0px,5vw,64px)' }}
           data-aos="fade-left"
         >
-          {/* 2×3 card grid */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            gap: '14px',
-            marginBottom: '36px',
-          }}>
+          {/* Responsive grid */}
+          <div 
+            className="grid grid-cols-1 sm:grid-cols-2"
+            style={{
+              gap: '14px',
+              marginBottom: '36px',
+            }}
+          >
             {highlights.map((h, i) => (
               <div
                 key={i}

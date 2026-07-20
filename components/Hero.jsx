@@ -161,9 +161,9 @@ const Hero = ({ setIsOpen }) => {
           overflow: 'hidden',
         }}>
           {[
-            { label: 'STATUS', value: 'NEW LAUNCH' },
-            { label: 'CONFIGURATIONS', value: '2, 3 & 4 BHK FLATS' },
-            { label: 'PRICE', value: '79.99 Lacs* ONWARDS' },
+            { label: 'STATUS', value: <>NEW LAUNCH<br className="md:hidden" /> APARTMENTS</> },
+            { label: 'CONFIGURATIONS', value: <>2, 3 & 4 BHK<br className="md:hidden" /> FLATS</> },
+            { label: 'PRICE', value: <>79.99 Lacs*<br className="md:hidden" /> ONWARDS</> },
           ].map((item, i) => (
             <div
               key={i}
