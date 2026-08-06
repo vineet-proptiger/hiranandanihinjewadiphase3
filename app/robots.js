@@ -3,7 +3,8 @@ export default function robots() {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
+        allow: ['/', '/new-launch'],
+        disallow: ['/privacy-policy', '/new-launch/privacy-policy'],
       },
     ],
     sitemap: 'https://hiranandanihinjewadiphase3.in/sitemap.xml',

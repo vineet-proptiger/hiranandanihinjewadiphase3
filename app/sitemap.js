@@ -9,10 +9,10 @@ export default function sitemap() {
       priority: 1,
     },
     {
-      url: `${BASE_URL}/privacy-policy`,
+      url: `${BASE_URL}/new-launch`,
       lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.8,
+      changeFrequency: 'monthly',
+      priority: 0.9,
     },
   ]
 }
