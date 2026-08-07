@@ -1,38 +1,38 @@
 'use client'
 import React from 'react'
-import { Building2, TrainFront, Sparkles, Trees, Sun, TrendingUp } from 'lucide-react'
+import { Building2, CarFront, Leaf, Trees, Map, Award } from 'lucide-react'
 
 const Highlights = () => {
   const highlightItems = [
     {
       icon: <Building2 size={32} color="#fff" strokeWidth={1.75} />,
-      title: 'Iconic Tower Launch in Hinjewadi Phase 3',
-      desc: 'Experience ultra-luxury living in Pune\'s most prestigious township.',
+      title: '105-Acre Township',
+      desc: 'Sprawling 105-acre township in North Hinjewadi, Pune.',
     },
     {
-      icon: <TrainFront size={32} color="#fff" strokeWidth={1.75} />,
-      title: 'Located in Pune\'s Prime IT Hub',
-      desc: 'Strategic proximity to global IT parks and upcoming Metro.',
+      icon: <CarFront size={32} color="#fff" strokeWidth={1.75} />,
+      title: '5 Mins to Ring Road',
+      desc: 'Proposed Ring Road just 5 minutes from the township.',
     },
     {
-      icon: <Sparkles size={32} color="#fff" strokeWidth={1.75} />,
-      title: 'Premium Homes in Integrated Township',
-      desc: 'Luxurious residences within a self-sustained 105-acre master-planned township.',
+      icon: <Leaf size={32} color="#fff" strokeWidth={1.75} />,
+      title: 'TERI Collaboration',
+      desc: 'TERI collaboration to enhance air quality and sustainability.',
     },
     {
       icon: <Trees size={32} color="#fff" strokeWidth={1.75} />,
-      title: 'Surrounded by Landscaped Greens',
-      desc: 'Over 70% open spaces featuring lush thematic gardens.',
+      title: '40-Acre Della Resort',
+      desc: 'Includes 40-acre Della Resort with Polo Club & pond.',
     },
     {
-      icon: <Sun size={32} color="#fff" strokeWidth={1.75} />,
-      title: 'Designed for Natural Light & Ventilation',
-      desc: 'Scientific architecture ensuring maximum daylight and perfect cross-ventilation.',
+      icon: <Map size={32} color="#fff" strokeWidth={1.75} />,
+      title: 'Excellent Connectivity',
+      desc: 'Excellent access to IT hubs, metro, schools, and malls.',
     },
     {
-      icon: <TrendingUp size={32} color="#fff" strokeWidth={1.75} />,
-      title: 'Phase 3 Token Booking Now Open',
-      desc: 'Avail early-bird advantages with exclusive limited-period token bookings.',
+      icon: <Award size={32} color="#fff" strokeWidth={1.75} />,
+      title: 'IGBC Platinum Status',
+      desc: 'IGBC Platinum Certification in progress for eco-township status.',
     },
   ]
 

@@ -36,6 +36,7 @@ export default function Home() {
       <Navbar setIsOpen={setIsOpen} />
       <Hero setIsOpen={setIsOpen} />
       <Overview setIsOpen={setIsOpen} />
+      <Highlights setIsOpen={setIsOpen} />
       {/* <Amenities setIsOpen={setIsOpen} /> */}
       <CarouselSection 
         setIsOpen={setIsOpen} 
@@ -51,7 +52,6 @@ export default function Home() {
       />
       {/* <ExclusiveAmenities /> */}
       <Pricing setIsOpen={setIsOpen} />
-      <Highlights setIsOpen={setIsOpen} />
       {/* <Gallery setIsOpen={setIsOpen} /> */}
       {/* <Projects setIsOpen={setIsOpen} /> */}
       <Location />

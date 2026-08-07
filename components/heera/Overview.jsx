@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
+import { Check, X } from 'lucide-react'
 import { overviewImage } from '../../lib/heera/images'
 
 const Overview = ({ setIsOpen }) => {
@@ -190,13 +191,43 @@ const Overview = ({ setIsOpen }) => {
               data-aos-duration="1000" 
               data-aos-delay="200"
             >
-              <div className="w-full md:w-1/2 border-b md:border-b-0 md:border-r border-[#d3be8a] flex flex-col justify-center bg-[#fdfbf7]" style={{ padding: '16px 24px' }}>
-                <p style={{ color: '#7a7a7a', fontSize: '11px', letterSpacing: '1.5px', textTransform: 'uppercase', marginBottom: '4px', fontWeight: '600' }}>Township Area</p>
-                <h3 style={{ color: '#000242', fontSize: '14px', fontWeight: '700', textTransform: 'uppercase', lineHeight: '1.4' }}>105 ACRES</h3>
+              <div className="w-full md:w-1/2 border-b md:border-b-0 md:border-r border-[#d3be8a] flex flex-col bg-[#fdfbf7]" style={{ padding: '20px 24px' }}>
+                <h3 style={{ color: '#000242', fontSize: '17px', fontWeight: '700', textTransform: 'uppercase', marginBottom: '6px' }}>Priority Booking</h3>
+                <p style={{ color: '#c28522', fontSize: '15px', fontWeight: '700', marginBottom: '16px' }}>EOI ₹2.70 Lakhs</p>
+                
+                <div className="flex flex-col gap-3">
+                  <div className="flex items-start gap-2.5 text-[14px] text-gray-700 font-medium leading-snug">
+                    <Check size={18} className="text-green-600 shrink-0 mt-0.5" strokeWidth={3} /> 
+                    <span>Up to ₹6 Lakhs Benefit</span>
+                  </div>
+                  <div className="flex items-start gap-2.5 text-[14px] text-gray-700 font-medium leading-snug">
+                    <Check size={18} className="text-green-600 shrink-0 mt-0.5" strokeWidth={3} /> 
+                    <span>Preferred Unit Reserved</span>
+                  </div>
+                  <div className="flex items-start gap-2.5 text-[14px] text-gray-700 font-medium leading-snug">
+                    <Check size={18} className="text-green-600 shrink-0 mt-0.5" strokeWidth={3} /> 
+                    <span>Priority Allotment</span>
+                  </div>
+                </div>
               </div>
-              <div className="w-full md:w-1/2 flex flex-col justify-center bg-[#fdfbf7]" style={{ padding: '16px 24px' }}>
-                <p style={{ color: '#7a7a7a', fontSize: '11px', letterSpacing: '1.5px', textTransform: 'uppercase', marginBottom: '4px', fontWeight: '600' }}>Configurations:</p>
-                <h3 style={{ color: '#000242', fontSize: '14px', fontWeight: '700', textTransform: 'uppercase', lineHeight: '1.4' }}>2, 3 &amp; 4 BHK FLATS<br/>STARTING AT ₹ 79.99 LACS*</h3>
+              <div className="w-full md:w-1/2 flex flex-col bg-[#fdfbf7]" style={{ padding: '20px 24px' }}>
+                <h3 style={{ color: '#000242', fontSize: '17px', fontWeight: '700', textTransform: 'uppercase', marginBottom: '6px' }}>Standard Booking</h3>
+                <p style={{ color: '#c28522', fontSize: '15px', fontWeight: '700', marginBottom: '16px' }}>EOI ₹1.80 Lakhs</p>
+                
+                <div className="flex flex-col gap-3">
+                  <div className="flex items-start gap-2.5 text-[14px] text-gray-700 font-medium leading-snug">
+                    <Check size={18} className="text-green-600 shrink-0 mt-0.5" strokeWidth={3} /> 
+                    <span>₹1.80 Lakhs Benefit</span>
+                  </div>
+                  <div className="flex items-start gap-2.5 text-[14px] text-gray-700 font-medium leading-snug">
+                    <Check size={18} className="text-green-600 shrink-0 mt-0.5" strokeWidth={3} /> 
+                    <span>Early Access to Inventory</span>
+                  </div>
+                  <div className="flex items-start gap-2.5 text-[14px] text-gray-700 font-medium leading-snug">
+                    <X size={18} className="text-red-500 shrink-0 mt-0.5" strokeWidth={3} /> 
+                    <span>No Unit Reservation</span>
+                  </div>
+                </div>
               </div>
             </div>
 
