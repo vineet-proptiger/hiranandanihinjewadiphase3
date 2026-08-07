@@ -209,7 +209,7 @@ const Overview = ({ setIsOpen }) => {
             <img 
               src={overviewImage} 
               alt="Hiranandani Hinjewadi Township Overview" 
-              className="w-full h-auto rounded-xl shadow-2xl max-w-[500px] lg:max-w-[340px] xl:max-w-[360px] mx-auto object-cover transition-all duration-300"
+              className="w-full h-auto rounded-xl max-w-[500px] lg:max-w-[480px] xl:max-w-[560px] mx-auto transition-all duration-300"
             />
           </div>
         </div>
