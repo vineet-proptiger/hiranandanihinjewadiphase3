@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import { masterplanImages } from '../../lib/heera/images'
+import Image from 'next/image'
 
 const plans = [
   { 
@@ -82,9 +83,11 @@ const MasterPlan = ({ setIsOpen }) => {
           {activeTab === 'master' && (
             <div className="w-full max-w-[820px] mx-auto bg-white rounded-md overflow-hidden shadow-[0_5px_15px_rgba(0,0,0,0.1)] p-4" data-aos="zoom-in" data-aos-duration="1000">
               <div onClick={() => setLightboxImg(masterplanImages.masterPlan)} className="cursor-pointer block relative overflow-hidden group bg-[#fdfbf7]">
-                <img 
+                <Image 
                   src={masterplanImages.masterPlan} 
                   alt="Master Plan" 
+                  width={1200}
+                  height={800}
                   className="w-full h-auto mx-auto transition-transform duration-500 group-hover:scale-105" 
                 />
               </div>

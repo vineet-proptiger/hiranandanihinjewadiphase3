@@ -237,9 +237,11 @@ const Overview = ({ setIsOpen }) => {
         {/* Right Side: Image */}
         <div className="w-full lg:w-5/12 mt-10 lg:mt-0 flex justify-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
           <div className="image_caption_wrap relative w-full flex justify-center">
-            <img 
+            <Image 
               src={overviewImage} 
               alt="Hiranandani Hinjewadi Township Overview" 
+              width={600}
+              height={600}
               className="w-full h-auto rounded-xl max-w-[500px] lg:max-w-[480px] xl:max-w-[560px] mx-auto transition-all duration-300"
             />
           </div>
