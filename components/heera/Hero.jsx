@@ -318,24 +318,6 @@ const Hero = ({ setIsOpen }) => {
               padding: 24px 20px 28px !important;
               z-index: 1;
             }
-            .hero-content::before {
-              content: '';
-              position: absolute;
-              inset: 0;
-              background-color: #C9A65A;
-              -webkit-mask-image: url('/heera/images/hero/leaf-bg.png');
-              mask-image: url('/heera/images/hero/leaf-bg.png');
-              -webkit-mask-size: contain;
-              mask-size: contain;
-              -webkit-mask-position: center center;
-              mask-position: center center;
-              -webkit-mask-repeat: no-repeat;
-              mask-repeat: no-repeat;
-              opacity: 1;
-              filter: drop-shadow(0 0 1px #C9A65A) drop-shadow(0 0 2px #C9A65A) drop-shadow(0 0 4px #C9A65A) brightness(1.3);
-              z-index: -1;
-              pointer-events: none;
-            }
             .hero-overlay {
               display: none !important;
             }
