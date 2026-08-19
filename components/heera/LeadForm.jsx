@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { PROJECT_ID, PROJECT_NAME, API_ENDPOINT, SHEET_NAME, SECRET_KEY, CITY_DISPLAY } from '../../lib/heera/config'
+import { useConfig } from '../../lib/ConfigContext'
 import { buildTrackingFields } from '../../lib/heera/formMeta'
 
 const GOLD = 'var(--color-gold)'
@@ -11,6 +11,8 @@ const inputClass = 'form-input mb-3 shadow-sm'
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 
 const LeadForm = ({ formName = 'Hero Form', btnText = 'Submit Details', isTransparent = false }) => {
+  const { PROJECT_ID, PROJECT_NAME, API_ENDPOINT, SHEET_NAME, SECRET_KEY, CITY_DISPLAY, CITY_ID, CITY_SLUG } = useConfig()
+  
   const [formData, setFormData] = useState({ fullname: '', email: '', phone: '' })
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
@@ -37,6 +39,8 @@ const LeadForm = ({ formName = 'Hero Form', btnText = 'Submit Details', isTransp
     payload.append('sheet_name', SHEET_NAME)
     payload.append('secret', SECRET_KEY)
     payload.append('city', CITY_DISPLAY)
+    payload.append('cityId', CITY_ID)
+    payload.append('citySlug', CITY_SLUG)
     Object.entries(tracking).forEach(([k, v]) => payload.append(k, v))
     try {
       const res = await fetch(API_ENDPOINT, { method: 'POST', body: payload })

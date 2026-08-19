@@ -2,8 +2,8 @@ import './heera.css'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { Open_Sans, Montserrat, Cormorant_Garamond, Poppins } from 'next/font/google'
-import { CITY_DISPLAY } from '../../lib/heera/config'
-import * as heeraConfig from '../../lib/heera/config'
+import { CITY_DISPLAY } from '../../lib/mumbaiConfig'
+import * as mumbaiConfig from '../../lib/mumbaiConfig'
 import { ConfigProvider } from '../../lib/ConfigContext'
 import { faviconImage } from '../../lib/heera/images'
 import localFont from 'next/font/local'
@@ -54,12 +54,12 @@ export const metadata = {
     apple: faviconImage,
   },
   alternates: {
-    canonical: 'https://hiranandanihinjewadiphase3.in/new-launch',
+    canonical: 'https://hiranandanihinjewadiphase3.in/apartments-in-pune',
   },
   openGraph: {
     title: 'Hiranandani Hinjewadi Township | 2, 3 & 4 BHK Flats, Hinjewadi Phase 3, Krisala Everland, Pune',
     description: 'Hiranandani Hinjewadi Township — New Launch 2, 3 & 4 BHK Flats in Hinjewadi Phase 3, Krisala Everland, Pune. A 105-acre integrated township by Hiranandani Group on the Pune IT & Growth Corridor. Starting ₹79.99 Lacs*.',
-    url: 'https://hiranandanihinjewadiphase3.in/new-launch',
+    url: 'https://hiranandanihinjewadiphase3.in/apartments-in-pune',
     siteName: 'Hiranandani Hinjewadi Township',
     images: [
       {
@@ -84,7 +84,7 @@ import SmoothScroll from '../../components/heera/SmoothScroll'
 
 export default function HeeraLayout({ children }) {  
   return (
-    <ConfigProvider config={{ ...heeraConfig }}>
+    <ConfigProvider config={{ ...mumbaiConfig }}>
       <div className="heera-layout">
         <GoogleTagManager gtmId="GTM-575H8R87" />
         <Script

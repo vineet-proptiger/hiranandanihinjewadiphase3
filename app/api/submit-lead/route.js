@@ -132,8 +132,8 @@ export async function POST(request) {
       projectId,
       projectName,
 
-      cityId: CITY_ID,
-      cityName: CITY_SLUG,
+      cityId: get('cityId') || CITY_ID,
+      cityName: get('citySlug') || CITY_SLUG,
 
       gaMedium: utmMedium,
       campaign: utmCampaign,
