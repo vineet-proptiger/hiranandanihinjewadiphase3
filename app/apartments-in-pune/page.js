@@ -148,7 +148,7 @@ export default function Home() {
           </a>
           
           <a
-            href="https://wa.me/919560582493?text=Hi%20Prem%2C%20Please%20share%20the%20project%20details%20of%20Hiranandani%20Phase%203"
+            href="https://wa.me/919560582493?text=Hi%20P.K.%2C%20Please%20share%20the%20project%20details%20of%20Hiranandani%20Phase%203"
             target="_blank" rel="noopener noreferrer"
             className="flex flex-col items-center justify-center w-[51px] h-[51px] rounded-full text-white transition-all shadow-md shrink-0 gap-[2px] btn-whatsapp-glow"
             style={{ background: '#2cd36f' }}
