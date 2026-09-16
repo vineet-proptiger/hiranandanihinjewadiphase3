@@ -85,7 +85,7 @@ export default function Home() {
         </button>
 
         <a
-          href={`https://wa.me/919718344024?text=Hi%20I%20am%20interested%20in%20${encodeURIComponent(PROJECT_NAME)}`}
+          href={`https://wa.me/919560582493?text=Hi%20I%20am%20interested%20in%20${encodeURIComponent(PROJECT_NAME)}`}
           target="_blank" rel="noopener noreferrer"
           className="flex-1 flex flex-col items-center justify-center py-2 gap-1"
           style={{ background: '#25D366' }}
