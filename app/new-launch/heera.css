@@ -748,18 +748,18 @@ nav.fixed {
   background: #ffffff !important;
 }
 
-.heera-layout #highlights {
+.heera-layout section#highlights {
   background: transparent !important;
 }
 
-.heera-layout #location {
+.heera-layout section#location {
   background-image: url('/heera/images/highlights/highlight.webp') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
 }
 
-.heera-layout #location [data-aos="fade-up"] {
+.heera-layout section#location [data-aos="fade-up"] {
   background: #f8f2ec !important;
   border-color: #d5bd7e !important;
 }
@@ -769,7 +769,7 @@ nav.fixed {
   background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, transparent 100%) !important;
 }
 
-.heera-layout #developer {
+.heera-layout section#developer {
   background-image: url('/heera/images/about-devloper/about-dev.webp') !important;
   background-size: cover !important;
   background-position: center !important;

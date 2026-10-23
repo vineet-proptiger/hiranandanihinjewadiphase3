@@ -1,35 +1,28 @@
 import './globals.css'
-import { Open_Sans, Montserrat, Cormorant_Garamond } from 'next/font/google'
+import { Open_Sans, Montserrat, Poppins } from 'next/font/google'
 import { CITY_DISPLAY } from '../lib/config'
-import localFont from 'next/font/local'
 import { GoogleTagManager } from '@next/third-parties/google'
 import Script from 'next/script'
 import { faviconImages } from '../lib/images'
 
 const openSans = Open_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '600'],
   variable: '--font-sans',
   display: 'swap',
 })
 
 const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['500', '600', '700'],
   variable: '--font-jost',
   display: 'swap',
 })
 
-const cormorant = Cormorant_Garamond({
+const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-serif',
-  display: 'swap',
-})
-
-const nephilm = localFont({
-  src: '../public/fonts/Nephilm.otf',
-  variable: '--font-nephilm',
+  weight: ['400', '600', '700'],
+  variable: '--font-poppins',
   display: 'swap',
 })
 
@@ -47,7 +40,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <GoogleTagManager gtmId="GTM-575H8R87" />
-      <body className={`${openSans.variable} ${montserrat.variable} ${cormorant.variable} ${nephilm.variable} font-sans text-dark antialiased`}>
+      <body className={`${openSans.variable} ${montserrat.variable} ${poppins.variable} font-sans text-dark antialiased`}>
         <Script id="gtag-init" strategy="beforeInteractive">
           {`window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({ 'city': '${CITY_DISPLAY}' });

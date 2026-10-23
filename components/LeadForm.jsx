@@ -26,6 +26,46 @@ const LeadForm = ({ formName = 'Hero Form', btnText = 'Submit Details' }) => {
     if (!/^\d{10}$/.test(formData.phone)) { setError('Please enter a valid 10-digit mobile number.'); return }
     setError(''); setLoading(true)
     const tracking = buildTrackingFields()
+    
+    // --- GCLID-SPECIFIC BROWSER LIMIT (Max 3 submissions per GCLID / 30 days) ---
+    let currentCount = 0;
+    let safeGclid = '';
+    
+    if (tracking.gclid) {
+      safeGclid = tracking.gclid;
+      const cookieRegex = new RegExp(`(?:^|; )lead_trk_${PROJECT_ID}_${safeGclid}=([^;]*)`);
+      const cookieMatch = document.cookie.match(cookieRegex);
+      const cookieCount = cookieMatch ? parseInt(cookieMatch[1], 10) : 0;
+      
+      let lsCount = 0;
+      const lsKey = `lead_trk_data_${PROJECT_ID}`;
+      const lsDataStr = localStorage.getItem(lsKey);
+      
+      if (lsDataStr) {
+        try {
+          const lsData = JSON.parse(lsDataStr);
+          const gclidRecord = lsData[tracking.gclid];
+          
+          if (gclidRecord) {
+            if (Date.now() - gclidRecord.firstSeen < 2592000000) {
+              lsCount = gclidRecord.count || 0;
+            } else {
+              delete lsData[tracking.gclid];
+              localStorage.setItem(lsKey, JSON.stringify(lsData));
+            }
+          }
+        } catch (e) {}
+      }
+      
+      currentCount = Math.max(cookieCount, lsCount);
+      
+      if (currentCount >= 3) {
+        setSuccess(true);
+        setLoading(false);
+        return;
+      }
+    }
+
     const payload = new FormData()
     payload.append('fullname', formData.fullname)
     payload.append('email', formData.email)
@@ -41,6 +81,25 @@ const LeadForm = ({ formName = 'Hero Form', btnText = 'Submit Details' }) => {
       const res = await fetch(API_ENDPOINT, { method: 'POST', body: payload })
       const data = await res.json()
       if (data.status) {
+        if (tracking.gclid) {
+          const newCount = currentCount + 1;
+          if (typeof document !== 'undefined') document.cookie = `lead_trk_${PROJECT_ID}_${safeGclid}=${newCount}; max-age=2592000; path=/`;
+          
+          if (typeof localStorage !== 'undefined') {
+            const lsKey = `lead_trk_data_${PROJECT_ID}`;
+            let lsData = {};
+            try {
+              const existing = localStorage.getItem(lsKey);
+              if (existing) lsData = JSON.parse(existing);
+            } catch(e) {}
+            
+            lsData[tracking.gclid] = {
+              count: newCount,
+              firstSeen: (lsData[tracking.gclid] && lsData[tracking.gclid].firstSeen) ? lsData[tracking.gclid].firstSeen : Date.now()
+            };
+            try { localStorage.setItem(lsKey, JSON.stringify(lsData)); } catch(e) {}
+          }
+        }
         setSuccess(true)
         if (typeof window !== 'undefined') {
           window.dataLayer = window.dataLayer || []

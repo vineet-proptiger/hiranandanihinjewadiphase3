@@ -515,6 +515,7 @@ const Amenities = () => {
                     <img
                       src={item.img}
                       alt={item.title}
+                      loading="lazy"
                       onLoad={() => {
                         if (idx < 5) window.dispatchEvent(new Event('resize'))
                       }}

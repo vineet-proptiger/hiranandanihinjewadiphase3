@@ -5,6 +5,7 @@ import { galleryImages, amenityImages } from '../../lib/heera/images'
 
 import Navbar from '../../components/heera/Navbar'
 import Hero from '../../components/heera/Hero'
+import LazySection from '../../components/LazySection'
 
 const Overview = dynamic(() => import('../../components/heera/Overview'), { ssr: true })
 // const Projects = dynamic(() => import('../../components/heera/Projects'), { ssr: true })
@@ -36,34 +37,58 @@ export default function Home() {
       <Navbar setIsOpen={setIsOpen} />
       <Hero setIsOpen={setIsOpen} />
       <Overview setIsOpen={setIsOpen} />
-      <Highlights setIsOpen={setIsOpen} />
-      {/* <Amenities setIsOpen={setIsOpen} /> */}
-      <CarouselSection 
-        setIsOpen={setIsOpen} 
-        title="Where Every View Tells a Story" 
-        id="gallery" 
-        images={galleryImages} 
-      />
-      <CarouselSection 
-        setIsOpen={setIsOpen} 
-        title="Indulge in a Lifestyle Beyond Ordinary" 
-        id="amenities" 
-        images={amenityImages} 
-      />
-      {/* <ExclusiveAmenities /> */}
-      <Pricing setIsOpen={setIsOpen} />
-      {/* <Gallery setIsOpen={setIsOpen} /> */}
-      {/* <Projects setIsOpen={setIsOpen} /> */}
-      <Location />
-      {/* <Sustainability /> */}
-      {/* <JapaneseExcellence /> */}
-      <MasterPlan setIsOpen={setIsOpen} />
-      {/* <PaymentPlan setIsOpen={setIsOpen} /> */}
-      <AboutDeveloper setIsOpen={setIsOpen} />
-      {/* <VirtualTour setIsOpen={setIsOpen} /> */}
-      {/* <QuickChat /> */}
-      <Footer />
-      <EnquireModal isOpen={isOpen} setIsOpen={setIsOpen} />
+      {/* ── Highlights ── */}
+      <LazySection id="highlights" minHeight="450px">
+        <Highlights setIsOpen={setIsOpen} />
+      </LazySection>
+
+      {/* ── Gallery Carousel ── */}
+      <LazySection id="gallery" minHeight="550px">
+        <CarouselSection 
+          setIsOpen={setIsOpen} 
+          title="Where Every View Tells a Story" 
+          id="gallery" 
+          images={galleryImages} 
+        />
+      </LazySection>
+
+      {/* ── Amenities Carousel ── */}
+      <LazySection id="amenities" minHeight="550px">
+        <CarouselSection 
+          setIsOpen={setIsOpen} 
+          title="Indulge in a Lifestyle Beyond Ordinary" 
+          id="amenities" 
+          images={amenityImages} 
+        />
+      </LazySection>
+
+      {/* ── Pricing ── */}
+      <LazySection id="pricing" minHeight="450px">
+        <Pricing setIsOpen={setIsOpen} />
+      </LazySection>
+
+      {/* ── Location ── */}
+      <LazySection id="location" minHeight="500px">
+        <Location />
+      </LazySection>
+
+      {/* ── Master Plan ── */}
+      <LazySection id="masterplan" minHeight="550px">
+        <MasterPlan setIsOpen={setIsOpen} />
+      </LazySection>
+
+      {/* ── About Developer ── */}
+      <LazySection id="developer" minHeight="400px">
+        <AboutDeveloper setIsOpen={setIsOpen} />
+      </LazySection>
+
+      {/* ── Footer ── */}
+      <LazySection minHeight="300px">
+        <Footer />
+      </LazySection>
+
+      {/* ── Modal Deferral ── */}
+      {isOpen && <EnquireModal isOpen={isOpen} setIsOpen={setIsOpen} />}
 
       {/* Floating Vertical Enquire Tab — Desktop only */}
       <div 

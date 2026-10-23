@@ -39,6 +39,7 @@ const Footer = () => (
       </p>
       <Link
         href="/privacy-policy"
+        prefetch={false}
         style={{ fontFamily: F_SANS, fontSize: '13px', color: 'var(--color-gold)', textDecoration: 'underline' }}
       >
         Privacy Policy

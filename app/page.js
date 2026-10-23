@@ -5,47 +5,97 @@ import dynamic from 'next/dynamic'
 import { PROJECT_NAME } from '../lib/config'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
+import Overview from '../components/Overview'
+import LazySection from '../components/LazySection'
 
-const Overview = dynamic(() => import('../components/Overview'), { ssr: true })
-const Highlights = dynamic(() => import('../components/Highlights'), { ssr: true })
-const Pricing = dynamic(() => import('../components/Pricing'), { ssr: true })
-const Amenities = dynamic(() => import('../components/Amenities'), { ssr: true })
-const Location = dynamic(() => import('../components/Location'), { ssr: true })
-const MasterPlan = dynamic(() => import('../components/MasterPlan'), { ssr: true })
-const Downloads = dynamic(() => import('../components/Downloads'), { ssr: true })
-// const AboutGodrej = dynamic(() => import('../components/AboutGodrej'), { ssr: true })
-const AboutDeveloper = dynamic(() => import('../components/AboutDeveloper'), { ssr: true });
-const VirtualTour = dynamic(() => import('../components/VirtualTour'), { ssr: true })
-const Footer = dynamic(() => import('../components/Footer'), { ssr: true })
-
+// Dynamically split below-the-fold components
+const Highlights = dynamic(() => import('../components/Highlights'), { ssr: false })
 const Gallery = dynamic(() => import('../components/Gallery'), { ssr: false })
+const Pricing = dynamic(() => import('../components/Pricing'), { ssr: false })
+const Amenities = dynamic(() => import('../components/Amenities'), { ssr: false })
+const Location = dynamic(() => import('../components/Location'), { ssr: false })
+const MasterPlan = dynamic(() => import('../components/MasterPlan'), { ssr: false })
+const Downloads = dynamic(() => import('../components/Downloads'), { ssr: false })
+const AboutDeveloper = dynamic(() => import('../components/AboutDeveloper'), { ssr: false })
+const VirtualTour = dynamic(() => import('../components/VirtualTour'), { ssr: false })
+const Footer = dynamic(() => import('../components/Footer'), { ssr: false })
 const EnquireModal = dynamic(() => import('../components/EnquireModal'), { ssr: false })
 const AosInit = dynamic(() => import('../components/AosInit'), { ssr: false })
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false)
 
+  // Intent-based modal prefetching on hover / touch
+  const prefetchModal = () => {
+    import('../components/EnquireModal')
+  }
+
   return (
     <main className="relative min-h-screen bg-white">
       <AosInit />
-      <Navbar setIsOpen={setIsOpen} />
+      <Navbar setIsOpen={setIsOpen} onPrefetchModal={prefetchModal} />
+
+      {/* ── Above The Fold (Immediate load for High SEO & LCP) ── */}
       <Hero setIsOpen={setIsOpen} />
       <Overview setIsOpen={setIsOpen} />
-      <Highlights setIsOpen={setIsOpen} />
-      <Gallery setIsOpen={setIsOpen} />
-      <Pricing setIsOpen={setIsOpen} />
-      <Amenities setIsOpen={setIsOpen} />
-      <Location />
-      <MasterPlan setIsOpen={setIsOpen} />
-      <Downloads setIsOpen={setIsOpen} />
-      <AboutDeveloper />
-      <VirtualTour setIsOpen={setIsOpen} />
-      <Footer />
-      <EnquireModal isOpen={isOpen} setIsOpen={setIsOpen} />
+
+      {/* ── Highlights ── */}
+      <LazySection id="highlights" minHeight="500px">
+        <Highlights setIsOpen={setIsOpen} />
+      </LazySection>
+
+      {/* ── Gallery ── */}
+      <LazySection id="gallery" minHeight="550px">
+        <Gallery setIsOpen={setIsOpen} />
+      </LazySection>
+
+      {/* ── Pricing List ── */}
+      <LazySection id="pricing" minHeight="500px">
+        <Pricing setIsOpen={setIsOpen} />
+      </LazySection>
+
+      {/* ── Amenities ── */}
+      <LazySection id="amenities" minHeight="550px">
+        <Amenities setIsOpen={setIsOpen} />
+      </LazySection>
+
+      {/* ── Location & Map ── */}
+      <LazySection id="location" minHeight="500px">
+        <Location />
+      </LazySection>
+
+      {/* ── Master & Floor Plan ── */}
+      <LazySection id="masterplan" minHeight="550px">
+        <MasterPlan setIsOpen={setIsOpen} />
+      </LazySection>
+
+      {/* ── Downloads ── */}
+      <LazySection id="downloads" minHeight="450px">
+        <Downloads setIsOpen={setIsOpen} />
+      </LazySection>
+
+      {/* ── About Developer ── */}
+      <LazySection id="about" minHeight="400px">
+        <AboutDeveloper />
+      </LazySection>
+
+      {/* ── Virtual Tour ── */}
+      <LazySection minHeight="450px">
+        <VirtualTour setIsOpen={setIsOpen} />
+      </LazySection>
+
+      {/* ── Footer ── */}
+      <LazySection minHeight="350px">
+        <Footer />
+      </LazySection>
+
+      {/* ── Enquire Modal (Only mounted when triggered or pre-fetched on hover) ── */}
+      {isOpen && <EnquireModal isOpen={isOpen} setIsOpen={setIsOpen} />}
 
       {/* Floating vertical Enquire tab — desktop only */}
       <button
         onClick={() => setIsOpen(true)}
+        onMouseEnter={prefetchModal}
         className="hidden lg:flex btn-floating-tab"
         style={{
           writingMode: 'vertical-rl',
@@ -72,6 +122,8 @@ export default function Home() {
         
         <button
           onClick={() => setIsOpen(true)}
+          onMouseEnter={prefetchModal}
+          onTouchStart={prefetchModal}
           className="flex-1 flex flex-col items-center justify-center py-2 gap-1"
           style={{ background: 'var(--color-gold)', borderRight: '1px solid rgba(0,0,0,0.1)' }}
         >

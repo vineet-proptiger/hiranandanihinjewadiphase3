@@ -3,9 +3,6 @@ import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import { logoImages } from '../lib/images'
 
-const PHONE = '9718344024'
-const PHONE_DISPLAY = '9718 344 024'
-
 const navLinks = [
   { name: 'HOME', href: '#' },
   { name: 'OVERVIEW', href: '#overview' },
@@ -20,7 +17,33 @@ const navLinks = [
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
-const Navbar = ({ setIsOpen }) => {
+// Pre-fetch section code on hover
+const prefetchSection = (href) => {
+  switch (href) {
+    case '#highlights':
+      import('./Highlights')
+      break
+    case '#gallery':
+      import('./Gallery')
+      break
+    case '#pricing':
+      import('./Pricing')
+      break
+    case '#amenities':
+      import('./Amenities')
+      break
+    case '#location':
+      import('./Location')
+      break
+    case '#masterplan':
+      import('./MasterPlan')
+      break
+    default:
+      break
+  }
+}
+
+const Navbar = ({ setIsOpen, onPrefetchModal }) => {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -67,32 +90,16 @@ const Navbar = ({ setIsOpen }) => {
                   transition: 'color 0.2s',
                   position: 'relative',
                 }}
-                onMouseEnter={e => (e.target.style.color = 'var(--color-gold)')}
+                onMouseEnter={e => {
+                  e.target.style.color = 'var(--color-gold)'
+                  prefetchSection(link.href)
+                }}
                 onMouseLeave={e => (e.target.style.color = '#ffffff')}
               >
                 {link.name}
               </a>
             ))}
           </div>
-
-          {/* Phone — Desktop */}
-          {/* <a
-            href={`tel:${PHONE}`}
-            className="hidden lg:block"
-            style={{
-              fontFamily: F_JOST,
-              fontSize: '20px',
-              fontWeight: '700',
-              color: '#ffffff',
-              letterSpacing: '0.02em',
-              textDecoration: 'none',
-              transition: 'color 0.2s',
-            }}
-            onMouseEnter={e => (e.target.style.color = 'var(--color-gold)')}
-            onMouseLeave={e => (e.target.style.color = '#ffffff')}
-          >
-            {PHONE_DISPLAY}
-          </a> */}
 
           {/* Mobile hamburger */}
           <div className="lg:hidden flex items-center">
@@ -115,6 +122,7 @@ const Navbar = ({ setIsOpen }) => {
               key={link.name}
               href={link.href}
               onClick={() => setMobileOpen(false)}
+              onTouchStart={() => prefetchSection(link.href)}
               style={{
                 display: 'block',
                 padding: '14px 24px',
@@ -127,7 +135,11 @@ const Navbar = ({ setIsOpen }) => {
                 borderBottom: '1px solid rgba(255,255,255,0.08)',
                 transition: 'color 0.2s, background 0.2s',
               }}
-              onMouseEnter={e => { e.currentTarget.style.color = 'var(--color-gold)'; e.currentTarget.style.background = 'rgba(255,255,255,0.07)' }}
+              onMouseEnter={e => {
+                e.currentTarget.style.color = 'var(--color-gold)'
+                e.currentTarget.style.background = 'rgba(255,255,255,0.07)'
+                prefetchSection(link.href)
+              }}
               onMouseLeave={e => { e.currentTarget.style.color = '#ffffff'; e.currentTarget.style.background = 'transparent' }}
             >
               {link.name}
@@ -136,6 +148,8 @@ const Navbar = ({ setIsOpen }) => {
           <div style={{ padding: '16px 24px' }}>
             <button
               onClick={() => { setIsOpen(true); setMobileOpen(false) }}
+              onMouseEnter={() => onPrefetchModal?.()}
+              onTouchStart={() => onPrefetchModal?.()}
               className="btn-gold w-full"
               style={{ padding: '12px', fontSize: '13px' }}
             >
