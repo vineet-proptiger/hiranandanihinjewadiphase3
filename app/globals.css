@@ -529,96 +529,96 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   PREMIUM TEAL THEME — Section Overrides (logo-matched)
+   PREMIUM TEAL THEME — Section Overrides (logo-matched for main landing page)
    ═══════════════════════════════════════════════════════════════ */
 
 /* ─── Dark sections: black → premium deep teal ───────────────── */
-#highlights,
-#pricing,
-#location {
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) #highlights,
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) #pricing,
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) #location {
   background: linear-gradient(160deg, #0C3547 0%, #0E4358 60%, #0A2E3D 100%) !important;
 }
 
 /* ─── Light sections: cool grey → teal-tinted white ─────────── */
-#overview,
-#amenities,
-#about {
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) #overview,
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) #amenities,
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) #about {
   background: #F3F7F9 !important;
 }
 
-#masterplan,
-#gallery {
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) #masterplan,
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) #gallery {
   background: #ffffff !important;
 }
 
-#developer {
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) #developer {
   background: var(--color-bg-muted) !important;
 }
 
 /* ─── Pricing table: teal rows ───────────────────────────────── */
-#pricing table thead tr {
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) #pricing table thead tr {
   background: #061E28 !important;
 }
 
-#pricing table tbody tr:nth-child(odd) {
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) #pricing table tbody tr:nth-child(odd) {
   background: #0D3B50 !important;
 }
 
-#pricing table tbody tr:nth-child(even) {
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) #pricing table tbody tr:nth-child(even) {
   background: #1A5268 !important;
 }
 
-#pricing table,
-#pricing table td,
-#pricing table th {
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) #pricing table,
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) #pricing table td,
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) #pricing table th {
   border-color: rgba(var(--color-gold-rgb), 0.25) !important;
 }
 
 /* Mobile pricing cards */
-#pricing > div > div.flex > div {
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) #pricing > div > div.flex > div {
   background: #112F42 !important;
   border-color: rgba(var(--color-gold-rgb), 0.3) !important;
 }
 
 /* ─── Location boxes: dark grey → teal glass ────────────────── */
-#location [data-aos="fade-up"] {
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) #location [data-aos="fade-up"] {
   background: rgba(255, 255, 255, 0.07) !important;
   border-color: rgba(255, 255, 255, 0.12) !important;
 }
 
 /* ─── Amenity card hover: black → teal ──────────────────────── */
-#amenities div[style*="background"]:hover {
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) #amenities div[style*="background"]:hover {
   background: #0D3B50 !important;
 }
 
 /* ─── Highlights section bg fix for the image pane ──────────── */
-#highlights section {
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) #highlights section {
   background: transparent !important;
 }
 
 /* ─── Footer: near-black → very dark teal ───────────────────── */
-footer {
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) footer {
   background: #061E28 !important;
 }
 
 /* ─── Scrollbar: teal theme ──────────────────────────────────── */
-::-webkit-scrollbar-thumb {
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) ::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, var(--color-teal-light), var(--color-teal)) !important;
 }
 
 /* ─── Text selection: teal tint ─────────────────────────────── */
-::selection {
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) ::selection {
   background: rgba(13, 59, 80, 0.15) !important;
   color: var(--color-teal) !important;
 }
 
 /* ─── Focus ring: teal ───────────────────────────────────────── */
-*:focus-visible {
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) *:focus-visible {
   outline-color: rgba(31, 122, 150, 0.5) !important;
 }
 
 /* ─── Form inputs: teal focus ────────────────────────────────── */
-.form-input:focus {
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) .form-input:focus {
   border-color: var(--color-teal-light) !important;
   box-shadow: 0 0 0 3px rgba(31, 122, 150, 0.12) !important;
 }
@@ -627,6 +627,6 @@ footer {
 /* (--color-primary-dark & --color-primary now map to teal) */
 
 /* ─── Downloads section ──────────────────────────────────────── */
-#downloads {
+body:not(:has(.heera-layout)):not(:has(.krisala-layout)) #downloads {
   background: linear-gradient(160deg, #0C3547 0%, #0E4358 60%, #0A2E3D 100%) !important;
 }
